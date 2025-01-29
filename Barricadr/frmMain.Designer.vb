@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.txtPath = New System.Windows.Forms.TextBox()
         Me.dirPicker = New System.Windows.Forms.FolderBrowserDialog()
@@ -29,6 +30,8 @@ Partial Class frmMain
         Me.btnBlock = New System.Windows.Forms.Button()
         Me.btnAllow = New System.Windows.Forms.Button()
         Me.btnRestore = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblPathText = New System.Windows.Forms.Label()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.lblExplanation = New System.Windows.Forms.Label()
@@ -37,6 +40,7 @@ Partial Class frmMain
         Me.chkRecursiveScan = New System.Windows.Forms.CheckBox()
         Me.chkDarkMode = New System.Windows.Forms.CheckBox()
         Me.lnkGithub = New System.Windows.Forms.LinkLabel()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtPath
@@ -88,6 +92,7 @@ Partial Class frmMain
         'btnRestore
         '
         Me.btnRestore.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnRestore.ContextMenuStrip = Me.ContextMenuStrip1
         Me.btnRestore.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRestore.Location = New System.Drawing.Point(276, 331)
         Me.btnRestore.Name = "btnRestore"
@@ -96,6 +101,18 @@ Partial Class frmMain
         Me.btnRestore.Tag = "restore"
         Me.btnRestore.Text = "&Restore"
         Me.btnRestore.UseVisualStyleBackColor = False
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(129, 26)
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.ToolStripMenuItem1.Text = "Restore all"
         '
         'lblPathText
         '
@@ -207,6 +224,7 @@ Partial Class frmMain
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Barricadr"
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -226,4 +244,6 @@ Partial Class frmMain
     Friend WithEvents chkRecursiveScan As CheckBox
     Friend WithEvents chkDarkMode As CheckBox
     Friend WithEvents lnkGithub As LinkLabel
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

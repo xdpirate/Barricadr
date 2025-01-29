@@ -21,7 +21,7 @@ Public Class frmMain
                 lblHeader.Text = "Cleaning..."
                 'netsh advfirewall firewall show rule status=enabled name=all | FIND /I "Barricadr Block"
                 Dim tempBatchFile As String = System.IO.Path.GetTempPath() & Guid.NewGuid().ToString() & ".bat"
-                File.WriteAllText(tempBatchFile, $"@echo off{vbNewLine}netsh advfirewall firewall show rule status=enabled name=all | FIND /I ""Barricadr Block""")
+                File.WriteAllText(tempBatchFile, $"@echo off{vbNewLine}netsh advfirewall firewall show rule status=enabled name=all | FIND /I ""Barricadr""")
                 Dim batchy As Process = New System.Diagnostics.Process()
 
                 With batchy.StartInfo
@@ -273,5 +273,13 @@ Public Class frmMain
 
     Private Sub chkDarkMode_CheckedChanged(sender As Object, e As EventArgs) Handles chkDarkMode.CheckedChanged
         DarkMode(chkDarkMode.Checked)
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        btnRestore.Tag = "restoreall"
+        btnRestore.Text = "&Restore all"
+        btnRestore.BackColor = Color.Orange
+
+        ButtonHandler(btnRestore, e)
     End Sub
 End Class
