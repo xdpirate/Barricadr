@@ -1,6 +1,6 @@
 # Barricadr
 
-![image](https://github.com/user-attachments/assets/1d95f2b2-b2f4-482d-92b2-674ddf322f75)
+![image](https://github.com/user-attachments/assets/c30ae90d-6ae4-4c3e-858a-ddb9559d5841)
 
 *Barricadr* is a simple Windows Forms app (written in VB.NET), that lets you quickly generate firewall block/allow rules for an entire directory tree.
 

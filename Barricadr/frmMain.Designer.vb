@@ -201,6 +201,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnBrowse)
         Me.Controls.Add(Me.txtPath)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "frmMain"
