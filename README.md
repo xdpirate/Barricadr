@@ -12,6 +12,12 @@ Launch the app, pick a directory, and click one of the buttons to assign firewal
 
 Barricadr requires administrative permissions to function, and will ask for them on startup.
 
+# Requirements
+
+* Windows 7 or later
+* [.NET Framework 4.7.2](https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2)
+* Presumably an English-language install of Windows, Barricadr interacts and parses the output of `netsh advfirewall` in English (Patches welcome!)
+
 # Acknowledgements
 
 Inspired by [o-Zi-Yu/Windows-Firewall-Rule-Manager](https://github.com/o-Zi-Yu/Windows-Firewall-Rule-Manager/) and [Official-KEX/Firewall-Script](https://github.com/Official-KEX/Firewall-Script) - I wanted a GUI version where I didn't have to move batch files around, so that's what I made!
