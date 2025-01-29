@@ -52,10 +52,11 @@ Public Class frmMain
                     Process.Start("wf.msc")
                 End If
 
-                btnRestore.Tag = "restore"
-                btnRestore.Text = "&Restore"
-                btnRestore.BackColor = Color.LightSkyBlue
             End If
+
+            btnRestore.Tag = "restore"
+            btnRestore.Text = "&Restore"
+            btnRestore.BackColor = Color.LightSkyBlue
         Else
             Dim executables As List(Of String) = GetExecutables(txtPath.Text)
 
@@ -275,10 +276,18 @@ Public Class frmMain
         DarkMode(chkDarkMode.Checked)
     End Sub
 
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+    Private Sub RestoreAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestoreAllToolStripMenuItem.Click
         btnRestore.Tag = "restoreall"
         btnRestore.Text = "&Restore all"
         btnRestore.BackColor = Color.Orange
+
+        ButtonHandler(btnRestore, e)
+    End Sub
+
+    Private Sub RestoreToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestoreToolStripMenuItem.Click
+        btnRestore.Tag = "restore"
+        btnRestore.Text = "&Restore"
+        btnRestore.BackColor = Color.LightSkyBlue
 
         ButtonHandler(btnRestore, e)
     End Sub

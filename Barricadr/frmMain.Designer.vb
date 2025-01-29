@@ -31,7 +31,7 @@ Partial Class frmMain
         Me.btnAllow = New System.Windows.Forms.Button()
         Me.btnRestore = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RestoreAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblPathText = New System.Windows.Forms.Label()
         Me.lblHeader = New System.Windows.Forms.Label()
         Me.lblExplanation = New System.Windows.Forms.Label()
@@ -40,6 +40,7 @@ Partial Class frmMain
         Me.chkRecursiveScan = New System.Windows.Forms.CheckBox()
         Me.chkDarkMode = New System.Windows.Forms.CheckBox()
         Me.lnkGithub = New System.Windows.Forms.LinkLabel()
+        Me.RestoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,15 +105,15 @@ Partial Class frmMain
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RestoreToolStripMenuItem, Me.RestoreAllToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(129, 26)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(181, 70)
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
-        Me.ToolStripMenuItem1.Text = "Restore all"
+        Me.RestoreAllToolStripMenuItem.Name = "ToolStripMenuItem1"
+        Me.RestoreAllToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.RestoreAllToolStripMenuItem.Text = "Restore all"
         '
         'lblPathText
         '
@@ -199,6 +200,12 @@ Partial Class frmMain
         Me.lnkGithub.TabStop = True
         Me.lnkGithub.Text = "Github"
         '
+        'RestoreToolStripMenuItem
+        '
+        Me.RestoreToolStripMenuItem.Name = "RestoreToolStripMenuItem"
+        Me.RestoreToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RestoreToolStripMenuItem.Text = "Restore"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -245,5 +252,6 @@ Partial Class frmMain
     Friend WithEvents chkDarkMode As CheckBox
     Friend WithEvents lnkGithub As LinkLabel
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents RestoreAllToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RestoreToolStripMenuItem As ToolStripMenuItem
 End Class
